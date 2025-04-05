@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AP Human Geography Quiz</title>
+    <style>
+        :root {
+            --primary: #2E7D32;
+            --primary-light: #4CAF50;
+            --background: #F5F5F5;
+            --text: #000000;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--background);
+            color: var(--text);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            line-height: 1.6;
+        }
+
+        h1 {
+            color: var(--primary);
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        h3 {
+            color: var(--primary);
+            border-bottom: 2px solid var(--primary-light);
+            padding-bottom: 0.5rem;
+        }
+
+        .quiz-card {
+            background: white;
+            border-radius: 8px;
+            padding: 2rem;
+            margin: 1rem 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .question-part {
+            margin: 1.5rem 0;
+        }
+
+        .question-part strong {
+            color: var(--primary);
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 0.8rem;
+            margin-top: 0.5rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: inherit;
+        }
+
+        button[type="submit"] {
+            background-color: var(--primary-light);
+            color: white;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 4px;
+            font-size: 1rem;
+            cursor: pointer;
+            margin-top: 1rem;
+            transition: background-color 0.3s;
+        }
+
+        button[type="submit"]:hover {
+            background-color: var(--primary);
+        }
+    </style>
+</head>
+<body>
+    <div class="quiz-card">
+        <h1>AP Human Geography Short Answer Questions</h1>
+
+        <form method="POST">
+            <h3>Topic: {{ topic }}</h3>
+
+            {% for part, text in question_parts.items() %}
+            <div class="question-part">
+                <p><strong>{{ part }}) {{ text }}</strong></p>
+                <input type="text" name="response_{{ part }}" required>
+            </div>
+            {% endfor %}
+
+            <div style="text-align: center;">
+                <button type="submit">Submit Answers</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
+
+
+
+
+
+

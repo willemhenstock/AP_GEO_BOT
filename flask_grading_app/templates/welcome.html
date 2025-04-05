@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AP GeoBot</title>
+    <style>
+        :root {
+            --primary: #2E7D32;
+            --primary-light: #4CAF50;
+            --background: #F5F5F5;
+            --text: #333333;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--background);
+            color: var(--text);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            line-height: 1.6;
+        }
+
+        h1 {
+            color: var(--primary);
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            background-color: var(--primary-light);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            margin: 0.5rem;
+            font-weight: 500;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: var(--primary);
+        }
+
+        .card {
+            background: white;
+            border-radius: 8px;
+            padding: 2rem;
+            margin: 2rem 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .topics {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .topic-item {
+            background: white;
+            padding: 1rem;
+            border-left: 4px solid var(--primary-light);
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>Welcome to AP GeoBot</h1>
+        <p>Practice for the Human Geography AP exame with short answer practice questions and generated feedback</p>
+
+        <div style="text-align: center; margin: 2rem 0;">
+            <a href="/quiz" class="btn">Start New Quiz</a>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2 style="color: var(--primary); text-align: center;">Quiz Topics Include:</h2>
+        <div class="topics">
+            <div class="topic-item">Population and Migration</div>
+            <div class="topic-item">Cultural Patterns</div>
+            <div class="topic-item">Political Geography</div>
+            <div class="topic-item">Agriculture</div>
+            <div class="topic-item">Urbanization</div>
+            <div class="topic-item">Industrialization</div>
+            <div class="topic-item">Economic Development</div>
+        </div>
+    </div>
+</body>
+</html>
